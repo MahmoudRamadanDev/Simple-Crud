@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="crud.png" >
+    <title>Simple || Crud</title>
+    <style>
+        * {
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        table {
+            width: 700px;
+            margin: auto;
+            text-align: center;
+        } 
+        form {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        form > input {
+            border: 3px solid rebeccapurple;
+            outline: none;
+            border-radius: 10px;
+            transition: all 0.5s;
+            padding: 10px 15px;
+        }
+        input ~ #saveBtn {
+        outline: none;
+        border: none;
+        background: red;
+        margin-left: 30px;
+        width: 70px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 19px;
+        color: #fff;
+        letter-spacing: 1px;
+        }
+        #saveBtn ~ #update {
+        outline: none;
+        border: none;
+        background: black;
+        margin-left: 30px;
+        width: 90px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 19px;
+        color: #fff;
+        letter-spacing: 1px;
+        }
+        thead th {
+                padding: 15px;
+    background-color: #404040;
+    text-align: center;
+    border: 0px solid #eee;
+    color: white;
+        }
+        
+    tbody td {
+    background-color: #eee;
+    border: 0px solid #eee;
+    text-align: center;
+    padding: 10px;
+    font-size: 19px;
+}
+tbody button {
+    background-color: #03a9f4;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+</style>
+</head>
+<body>
+    <form>
+    <input type="text" placeholder="put your text here">
+    <button id="saveBtn">save</button>
+    <button id="update" style="display: none;">update</button>
+    </form>
+    <table border="1" id="list">
+        <thead>
+            <th>task</th>
+            <th>delete</th>
+            <th>update</th>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+    <script src="index.js"></script>
+</body>
+</html>
